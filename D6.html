@@ -225,7 +225,23 @@
                La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
             */
 
-      const generateTable = function () {};
+      const generateTable = function () {
+        const table = document.getElementById("tableArea"); //ottengo la table area e la metto dentro la costante table
+        console.log(table);
+        //creo l elemento tabella
+        const newTable = document.createElement("table"); // <table>
+        table.appendChild(newTable); //appendo table alla table area
+        const tableHeadrow = document.createElement("tr"); //creo la tr <tr>
+        newTable.appendChild(tableHeadrow); // appendo tr a table
+        const tableH = document.createElement("th"); //creo th
+        tableHeadrow.appendChild(tableH); //appendo th a tr
+        // tableHeadrow.appendChild(tableH); //appendo th a tr
+        // tableHeadrow.appendChild(tableH); //appendo th a tr
+        // tableHeadrow.appendChild(tableH); //appendo th a tr <--- non funziona
+        console.log(table);
+      };
+
+      generateTable();
 
       /* ESERCIZIO 12
                Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
